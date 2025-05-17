@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College ID Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="id-card">
+    <div class="header">
+      <h2>
+                JNTUA 
+        <br>    COLLEGE OF ENGINEERING 
+        <br>    [AUTONOMOUS]
+        <br>    ANANTHAPURAMU-515002[A.P]</h2>
+    </div>
+
+    <div class="logo-photo">
+      <img src="/images/college_logo.png" alt="College Logo" class="logo">
+      <img src="/images/photograph.jpg" alt="Student Photo" class="photo">
+      <div class="blood-group">
+        <img src="/images/blood-drop.png" alt="Blood Drop Icon" class="blood-icon">
+        <p>O+Ve</p>
+      </div>
+    </div>
+
+<div class="details">
+  <div class="row"><span class="label">Name</span><span class="value">PESARAVAI MANOHAR</span></div>
+  <div class="row"><span class="label">Admission No</span><span class="value">24001F0057</span></div>
+  <div class="row"><span class="label">Course</span><span class="value">M.C.A</span></div>
+  <div class="row"><span class="label">Branch</span><span class="value">C.S.E</span></div>
+  <div class="row"><span class="label">DOB</span><span class="value">10-05-2003</span></div>
+</div>
+
+<hr>
+    <div class="signatures">
+      <div class="signature-block">
+        <img src="/images/StudentSignature.png" alt="Signature" class="sign">
+        <p>Student <br>Signature</p>
+      </div>
+      <div class="signature-block">
+        <img src="/images/principal_signature.png" alt="Principal Signature" class="sign">
+        <p>Principal <br> Signature</p>
+      </div>
+    </div>
+
+    <div class="address">
+      <p><strong>Address: 28/859-G3, Vishwanagar,
+      Nandyal(m), Nandyal(dist) - 518501<br>
+      Cell : 7672060147</p></strong>
+    </div>
+
+    <div class="validity">
+      <p>Valid Up To: <span>June 2026</span></p>
+    </div>
+  </div>
+  <button onclick="downloadIDCard()">Download ID Card</button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+  function downloadIDCard() {
+    const idCard = document.querySelector('.id-card');
+    html2canvas(idCard, { scale: 2 }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'ID_Card.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    });
+  }
+</script>
+
+
+</body>
+</html>

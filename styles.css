@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.id-card {
+  width: 350px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background-color: #f0f3e5;
+  padding: 15px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+  text-align: center;
+  background-color: #1e2fa2;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logo-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.photo {
+  width: 80px;
+  height: 100px;
+  border: 2px solid black;
+}
+
+.blood-group {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+.blood-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.details .row {
+  display: grid;
+  grid-template-columns: 140px auto; /* Adjust width as needed */
+  margin: 4px 0;
+}
+
+.value::before {
+  content: ":";
+  margin-right: 10px;
+}
+.label {
+  font-weight: bold;
+  color: #333;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.signature-block {
+  text-align: center;
+}
+
+.sign {
+  width: 70px;
+  height: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.address {
+  font-size: 12px;
+  margin-bottom: 10px;
+  border: 1px solid orange;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.validity {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+}
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
